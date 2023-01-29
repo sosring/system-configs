@@ -140,7 +140,7 @@ bindsym $mod+u  mode "xmod"
 
 # Custom bindings 
 bindsym $mod+b exec firefox 
-bindsym $mod+g exec google-chrome 
+bindsym $mod+g exec google-chrome-unstable
 bindsym $mod+f exec nemo 
 bindsym $mod+v exec obs 
 for_window [class="^.*"] border pixel
@@ -149,10 +149,9 @@ bindsym $mod+e exec thunderbird
 bindsym $mod+w layout tabbed  
 bindsym $mod+o layout toggle split 
 
-# Sreen brightness controls
-
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
+# Handle backlight.
+bindsym XF86MonBrightnessUp exec light -A +5
+bindsym XF86MonBrightnessDown exec light -U -5
 
 for_window [class=".*"] border pixel 0
 
@@ -165,24 +164,23 @@ bindsym XF86AudioPrev exec playerctl previous
 # Floating window toggle
 bindsym $mod+m floating toggle
 
-
 # Interative screenshot  
-bindsym Print exec gnome-screenshot -i
+bindsym Print exec scrot ~/Pictures/screenshot/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 # crop-are screenshot  
 bindsym $mod+Print exec gnome-screenshot -a 
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --shapes
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --blocks
 
 # for transparency
-exec_always --no-startup-id compton
+exec_always --no-startup-id picom 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4DB6AC #4DB6AC #4DB6AC #4DB6AC   #4DB6AC
+client.focused          #EBDBB2 #EBDBB2 #EBDBB2 #EBDBB2   #EBDBB2 
 client.focused_inactive #333333 #5f676a #c8d5b9 #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -191,4 +189,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-exec_always feh --bg-fill $HOME/Pictures/wallpapers/faded-mountains.jpg
+exec_always feh --bg-fill $HOME/Pictures/wallpapers/gruv-temple.png
