@@ -143,17 +143,21 @@ bindsym $mod+b exec firefox
 bindsym $mod+g exec google-chrome-unstable
 bindsym $mod+f exec nemo 
 bindsym $mod+v exec obs 
-for_window [class="^.*"] border pixel
 bindsym $mod+e exec thunderbird
 
 bindsym $mod+w layout tabbed  
 bindsym $mod+o layout toggle split 
 
-# Handle backlight.
+# Handle ScreenLight 
 bindsym XF86MonBrightnessUp exec light -A +5
 bindsym XF86MonBrightnessDown exec light -U -5
 
-for_window [class=".*"] border pixel 0
+# Gaps 
+gaps inner 10
+gaps outer 8
+
+# Outline
+for_window [class=".*"] border pixel 0 
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause

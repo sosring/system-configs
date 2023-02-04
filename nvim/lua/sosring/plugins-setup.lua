@@ -25,8 +25,12 @@ end
 
 return packer.startup(function(use)
  use("wbthomason/packer.nvim")
- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme 
+
+ -- colorschemes
+ use("bluz71/vim-nightfly-guicolors") -- nightfly 
  use ('shaunsingh/nord.nvim') -- nord theme
+ use('drewtempelmeyer/palenight.vim') -- palenight
+ use('rose-pine/neovim') -- rose-pine
 
  -- tmux & split window navigation
  use("christoomey/vim-tmux-navigator")
@@ -45,7 +49,6 @@ return packer.startup(function(use)
    requires = { {'nvim-lua/plenary.nvim'} }
  }
 
- use('rose-pine/neovim')
  use('nvim-treesitter/nvim-treesitter',{ run = ':TSUpdate'})
 
  use { 'glepnir/dashboard-nvim', event = 'VimEnter',
