@@ -31,6 +31,15 @@ return packer.startup(function(use)
  use ('shaunsingh/nord.nvim') -- nord theme
  use('drewtempelmeyer/palenight.vim') -- palenight
  use('rose-pine/neovim') -- rose-pine
+ use("rebelot/kanagawa.nvim") -- kanagawa
+ use ( "ellisonleao/gruvbox.nvim" ) -- gruvbox
+ use({
+  "neanias/everforest-nvim",
+  -- Optional; default configuration will be used if setup isn't called.
+  config = function()
+    require("everforest").setup()
+  end,
+})
 
  -- tmux & split window navigation
  use("christoomey/vim-tmux-navigator")
@@ -51,14 +60,7 @@ return packer.startup(function(use)
 
  use('nvim-treesitter/nvim-treesitter',{ run = ':TSUpdate'})
 
- use { 'glepnir/dashboard-nvim', event = 'VimEnter',
-    config = function()
-      require('dashboard').setup {
-        -- config
-      }
-    end,
-    require = { {'nvim-tree/nvim-web-devicons'}}
-  }
+ --use { 'glepnir/dashboard-nvim', event = 'VimEnter', config = function() require('dashboard').setup { config } end, require = { {'nvim-tree/nvim-web-devicons'}} }
 
  use {
    'VonHeikemen/lsp-zero.nvim',
@@ -81,6 +83,13 @@ return packer.startup(function(use)
      {'rafamadriz/friendly-snippets'},
    }
  }
+
+ use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+ }) -- markdown-preview
+
+ use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   if packer_bootstrap then
     require('packer').sync()
