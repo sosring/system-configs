@@ -33,6 +33,8 @@ return packer.startup(function(use)
  use('rose-pine/neovim') -- rose-pine
  use("rebelot/kanagawa.nvim") -- kanagawa
  use ( "ellisonleao/gruvbox.nvim" ) -- gruvbox
+ use("savq/melange-nvim") -- Melange theme
+ use("EdenEast/nightfox.nvim") -- Nigthfox
  use({
   "neanias/everforest-nvim",
   -- Optional; default configuration will be used if setup isn't called.
@@ -52,6 +54,7 @@ return packer.startup(function(use)
  use('nvim-lualine/lualine.nvim') -- status line
  use("akinsho/toggleterm.nvim") -- toggle terminal
  use( 'mhartington/formatter.nvim' ) -- formatter
+ use('neoclide/coc.nvim') -- Coc
 
  use {
    'nvim-telescope/telescope.nvim', tag = '0.1.0',

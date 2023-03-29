@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/yulang/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/yulang/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/yulang/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -165,6 +170,11 @@ _G.packer_plugins = {
     path = "/home/yulang/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["melange-nvim"] = {
+    loaded = true,
+    path = "/home/yulang/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
+  },
   neovim = {
     loaded = true,
     path = "/home/yulang/.local/share/nvim/site/pack/packer/start/neovim",
@@ -174,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/yulang/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/yulang/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nord.nvim"] = {
     loaded = true,
