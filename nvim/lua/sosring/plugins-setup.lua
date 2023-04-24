@@ -48,7 +48,7 @@ return packer.startup(function(use)
  use("szw/vim-maximizer") -- maximizes and restores current window
  use("vim-scripts/ReplaceWithRegister")
  use('mattn/emmet-vim') -- emmet
- use('preservim/nerdtree') -- nerdTree
+ --use('preservim/nerdtree') -- nerdTree
  use('windwp/nvim-autopairs')
  use('nvim-tree/nvim-web-devicons') 
  use('nvim-lualine/lualine.nvim') -- status line
@@ -56,9 +56,21 @@ return packer.startup(function(use)
  use( 'mhartington/formatter.nvim' ) -- formatter
  use('neoclide/coc.nvim') -- Coc
 
+ use('nvim-tree/nvim-web-devicons') -- Tabs
  use {
    'nvim-telescope/telescope.nvim', tag = '0.1.0',
    requires = { {'nvim-lua/plenary.nvim'} }
+ }
+
+ -- Nvim Tree
+ use {
+  'nvim-tree/nvim-tree.lua',
+  requires = {
+    'nvim-tree/nvim-web-devicons', -- optional
+  },
+  config = function()
+    require("nvim-tree").setup {}
+  end
  }
 
  use('nvim-treesitter/nvim-treesitter',{ run = ':TSUpdate'})
@@ -86,13 +98,6 @@ return packer.startup(function(use)
      {'rafamadriz/friendly-snippets'},
    }
  }
-
- use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
- }) -- markdown-preview
-
- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   if packer_bootstrap then
     require('packer').sync()
