@@ -50,7 +50,6 @@ return packer.startup(function(use)
  use('mattn/emmet-vim') -- emmet
  --use('preservim/nerdtree') -- nerdTree
  use('windwp/nvim-autopairs')
- use('nvim-tree/nvim-web-devicons') 
  use('nvim-lualine/lualine.nvim') -- status line
  use("akinsho/toggleterm.nvim") -- toggle terminal
  use( 'mhartington/formatter.nvim' ) -- formatter
@@ -98,6 +97,7 @@ return packer.startup(function(use)
      {'rafamadriz/friendly-snippets'},
    }
  }
+ use('norcalli/nvim-colorizer.lua') -- colorizer
 
   if packer_bootstrap then
     require('packer').sync()

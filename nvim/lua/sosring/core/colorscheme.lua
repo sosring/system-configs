@@ -1,6 +1,6 @@
 function colorScheme(color)
 
-  color = color or 'melange'
+  color = color or 'gruvbox' --'melange'
   vim.cmd.colorscheme(color)
 
   vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
