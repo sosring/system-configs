@@ -7,6 +7,8 @@ keymap.set('i', 'jj', '<ESC>')
 keymap.set('', 'ss', ':w <CR>')
 keymap.set('', 'qq', ':q! <CR>')
 keymap.set('', '<SPACE>nh', ':nohlsearch <CR>')
+keymap.set('', 'fr', ':s/')   -- find and replace
+keymap.set('', 'fra', ':%s/') -- find and replace all
 
 -- Code Runtime
 keymap.set('', '<C-p>', ':!python3 % <CR>')
