@@ -2,6 +2,7 @@ require('sosring.base')
 require('sosring.maps')
 require('sosring.highlights')
 require('sosring.toggleterm')
+require('sosring.lsp')
 require('sosring.plugins')
 
 -- local has = vim.fn.has
