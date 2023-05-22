@@ -66,6 +66,7 @@ packer.startup(function(use)
   use 'akinsho/toggleterm.nvim'  -- Toggle Term
   -- use 'Pocco80/auto-save.nvim'   -- auto-save
   use 'terrortylor/nvim-comment' -- comment
+  use 'neoclide/coc.nvim'
 
   -- Themes
   use 'sainnhe/everforest' -- everforest

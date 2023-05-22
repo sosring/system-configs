@@ -1,14 +1,21 @@
 local keymap = vim.keymap
 
-keymap.set('n', 'x', '"_x')
+--keymap.set('n', 'x', '"_x')
 
 -- Basic keymaps
 keymap.set('i', 'jj', '<ESC>')
 keymap.set('', 'ss', ':w <CR>')
 keymap.set('', 'qq', ':q! <CR>')
 keymap.set('', '<SPACE>nh', ':nohlsearch <CR>')
-keymap.set('', 'fr', ':s/')   -- find and replace
-keymap.set('', 'fra', ':%s/') -- find and replace all
+
+-- keymap.set('', '<C-f>', ':s/') -- find and replace
+keymap.set('', 'rr', ':%s/') -- kind and replace all
+
+-- Tabs
+keymap.set('n', 'tt', ':tabnew <CR>')
+keymap.set('n', 'tq', ':tabclose <CR>')
+keymap.set('n', 'tf', ':tabfirst <CR>')
+keymap.set('n', 'tl', ':tablast <CR>')
 
 -- Code Runtime
 keymap.set('', '<C-p>', ':!python3 % <CR>')
