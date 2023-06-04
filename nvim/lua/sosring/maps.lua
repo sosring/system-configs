@@ -17,10 +17,10 @@ keymap.set('n', 'tq', ':tabclose <CR>')
 keymap.set('n', 'tf', ':tabfirst <CR>')
 keymap.set('n', 'tl', ':tablast <CR>')
 
--- Code Runtime
-keymap.set('', '<C-p>', ':!python3 % <CR>')
-keymap.set('', '<C-n>', ':!node % <CR>')
-keymap.set('', '<F5>', ':term python3 % <CR>')
+-- Language specific code runtime
+vim.cmd("autocmd FileType javascript lua vim.keymap.set('n', '<C-p>', ':!node %<CR>')")
+vim.cmd("autocmd FileType php lua vim.keymap.set('n', '<C-p>', ':!php %<CR>')")
+vim.cmd("autocmd FileType python lua vim.keymap.set('n', '<C-p>', ':!python %<CR>')")
 
 -- Plugins Map
 keymap.set('', '<SPACE>f', ':NvimTreeFindFileToggle <CR>')
