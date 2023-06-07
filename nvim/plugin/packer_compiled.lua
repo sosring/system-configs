@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/yulang/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/yulang/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "/home/yulang/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
@@ -244,6 +249,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/yulang/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/yulang/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   },
   ["zen-mode.nvim"] = {
     loaded = true,

@@ -70,4 +70,7 @@ packer.startup(function(use)
   -- Themes
   use 'sainnhe/everforest'    -- everforest
   use 'navarasu/onedark.nvim' -- onedark
+  use 'neoclide/coc.nvim'
+  -- , {'branch': 'release'}
+  use 'mg979/vim-visual-multi' -- multi-cursor
 end)
