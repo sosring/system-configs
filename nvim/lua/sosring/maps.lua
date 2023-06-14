@@ -17,6 +17,18 @@ keymap.set('n', 'tq', ':tabclose <CR>')
 keymap.set('n', 'tf', ':tabfirst <CR>')
 keymap.set('n', 'tl', ':tablast <CR>')
 
+-- Tab move
+keymap.set('n', '<A-1>', ':tabmove 0 <CR>')
+keymap.set('n', '<A-2>', ':tabmove 2 <CR>')
+keymap.set('n', '<A-3>', ':tabmove 3 <CR>')
+keymap.set('n', '<A-4>', ':tabmove 4 <CR>')
+keymap.set('n', '<A-5>', ':tabmove 5 <CR>')
+keymap.set('n', '<A-6>', ':tabmove 6 <CR>')
+keymap.set('n', '<A-7>', ':tabmove 7 <CR>')
+keymap.set('n', '<A-8>', ':tabmove 8 <CR>')
+keymap.set('n', '<A-9>', ':tabmove 9 <CR>')
+keymap.set('n', '<A-0>', ':tabmove 10 <CR>')
+
 -- Language specific code runtime
 vim.cmd("autocmd FileType javascript lua vim.keymap.set('n', '<C-p>', ':!node %<CR>')")
 vim.cmd("autocmd FileType php lua vim.keymap.set('n', '<C-p>', ':!php %<CR>')")
