@@ -132,8 +132,8 @@ bindsym $mod+u  mode "default"
 }
 
 # Custom bindings 
-bindsym $mod+b exec firefox 
-bindsym $mod+g exec google-chrome-unstable
+bindsym $mod+b exec evince 
+bindsym $mod+g exec google-chrome-stable
 bindsym $mod+f exec nemo 
 bindsym $mod+v exec obs 
 bindsym $mod+e exec thunderbird
@@ -152,13 +152,17 @@ gaps inner 12
 gaps outer 4
 
 # Outline
-for_window [class=".*"] border pixel 0 
+for_window [class=".*"] border pixel 0
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# Scratchpad 
+bindsym $mod+s scratchpad show
+bindsym $mod+Shift+s move scratchpad
 
 # Floating window toggle
 bindsym $mod+m floating toggle
@@ -170,7 +174,7 @@ bindsym Print exec scrot ~/Pictures/screenshot/%Y-%m-%d-%T-screenshot.png && not
 bindsym $mod+Print exec gnome-screenshot -a 
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --cuts
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
 
 # for transparency
 exec_always --no-startup-id picom 
@@ -188,4 +192,4 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-exec_always feh --bg-fill $HOME/Pictures/wallpapers/calabera-laka-laka.png
+exec_always feh --bg-fill $HOME/Pictures/wallpapers/train.jpg
