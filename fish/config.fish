@@ -45,6 +45,14 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   end
 end
 
+if status --is-interactive
+    function fish_user_key_bindings
+       bind \n backward-delete-char
+       bind -M insert \n backward-delete-char
+       bind -m insert \n backward-delete-char
+    end
+end
+
 switch (uname)
   case Darwin
     source (dirname (status --current-filename))/config-osx.fish

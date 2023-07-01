@@ -86,6 +86,7 @@ _open_files_for_editing() {
 ################################################################################
 
 eval "$(starship init bash)"
+alias clear='tput -x clear'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
